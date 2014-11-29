@@ -9,7 +9,9 @@
   <meta name="author" content="Moncef Baazet">
 
   
-  <meta name="description" content="I&rsquo;m testing some code snippets in here. Let&rsquo;s put some text first. Lorem Ipsum is simply dummy text of the printing and typesetting &hellip;">
+  <meta name="description" content="Foo bar. Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard
+dummy text &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,275 +89,31 @@
 
 
 
-<time class='entry-date' datetime='2014-09-04T17:41:00+01:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:41 pm</span></time>
+<time class='entry-date' datetime='2014-11-29T23:43:33+00:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>11:43 pm</span></time>
       
     </p>
     
     
-      <h1 class="entry-title"><a href="/blog/2014/09/04/testing-code-snippets/">Testing Code Snippets</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/11/29/testing-this-post/">Testing This Post</a></h1>
     
   </header>
 
 
-  <div class="entry-content"><p>I&rsquo;m testing some code snippets in here. Let&rsquo;s put some text first.</p>
-
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever
-since the 1500s, when an unknown printer took a galley of type and
-scrambled it to make a type specimen book. It has survived not only
-five centuries, but also the leap into electronic typesetting,
-remaining essentially unchanged. It was popularised in the 1960s with
-the release of Letraset sheets containing Lorem Ipsum passages, and
-more recently with desktop publishing software like Aldus PageMaker
-including versions of Lorem Ipsum.</p>
+  <div class="entry-content"><p>Foo bar. Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard
+dummy text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has survived
+not only five centuries, but also the leap into electronic
+typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum
+passages, and more recently with desktop publishing software like
+Aldus PageMaker including versions of Lorem Ipsum.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/docs/website
-</span><span class='line'>$ rake preview</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/d/website git:source$ rake new_post["Testing this post"]                           ◼
+</span><span class='line'>~/d/website git:source$</span></code></pre></td></tr></table></div></figure>
 
-
-
-
-<figure class='code'><figcaption><span>Extractor</span><a href='http://link.com'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#!/usr/bin/env python</span>
-</span><span class='line'><span class="c">#--</span>
-</span><span class='line'>
-</span><span class='line'><span class="sd">&quot;&quot;&quot;Extracteur d&#39;informations à partir de publications.</span>
-</span><span class='line'>
-</span><span class='line'><span class="sd">Ce programme extrait des informations à partir de représentations</span>
-</span><span class='line'><span class="sd">textuelles d&#39;un ensemble de publications de papiers. Ces publications</span>
-</span><span class='line'><span class="sd">sont de différentes catégories : conférence, journal, etc. (voir</span>
-</span><span class='line'><span class="sd">publications.py). Le but est d&#39;en avoir une présentation plus</span>
-</span><span class='line'><span class="sd">structurée, pour pouvoir enregistrer ces informations en base de</span>
-</span><span class='line'><span class="sd">données ou effectuer des traitements dessus.</span>
-</span><span class='line'>
-</span><span class='line'><span class="sd">Voir l&#39;aide (extractor.py --help) pour les formats de sortie</span>
-</span><span class='line'><span class="sd">possibles.</span>
-</span><span class='line'><span class="sd">&quot;&quot;&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kn">import</span> <span class="nn">argparse</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">corpus</span> <span class="kn">import</span> <span class="n">PubsCorpus</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">classifier</span> <span class="kn">import</span> <span class="n">Classifier</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">publications</span> <span class="kn">import</span> <span class="n">ConferencePub</span><span class="p">,</span> <span class="n">JournalPub</span><span class="p">,</span> <span class="n">RevuePub</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">pprinter</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">__author__</span> <span class="o">=</span> <span class="s">&quot;Anas Hilama, Moncef Baazet&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">Extractor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classifier</span><span class="p">):</span>
-</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">classifier</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">pubs_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_gen</span><span class="p">):</span>
-</span><span class='line'>        <span class="sd">&quot;&quot;&quot;Génére une représentation des données de chaque publication</span>
-</span><span class='line'><span class="sd">        fournie par input_gen.</span>
-</span><span class='line'><span class="sd">        &quot;&quot;&quot;</span>
-</span><span class='line'>        <span class="k">for</span> <span class="n">kpub</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classifier</span><span class="o">.</span><span class="n">get_classified</span><span class="p">(</span><span class="n">input_gen</span><span class="p">):</span>
-</span><span class='line'>            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_extracted_data</span><span class="p">(</span><span class="n">kpub</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">_get_extracted_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kpub</span><span class="p">):</span>
-</span><span class='line'>        <span class="n">pub_type</span><span class="p">,</span> <span class="n">pub</span> <span class="o">=</span> <span class="n">kpub</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">pub_type</span><span class="p">(</span><span class="n">pub</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>Zipper</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="c">(* A tree zipper</span>
-</span><span class='line'><span class="c"> * Implemented upon reading:</span>
-</span><span class='line'><span class="c">    http://chris-taylor.github.io/blog/2013/02/13/the-algebra-of-algebraic-data-types-part-iii/</span>
-</span><span class='line'><span class="c"> *</span>
-</span><span class='line'><span class="c"> * Example tree to play with:</span>
-</span><span class='line'><span class="c"> * &gt; let t = Node (1,</span>
-</span><span class='line'><span class="c">                   Node (2,</span>
-</span><span class='line'><span class="c">                     Node (3, Empty, Node (4, Empty, Empty)),</span>
-</span><span class='line'><span class="c">                     Empty),</span>
-</span><span class='line'><span class="c">                   Node (5,</span>
-</span><span class='line'><span class="c">                     Empty,</span>
-</span><span class='line'><span class="c">                     Node (6, Node (7, Empty, Empty), Empty)));;</span>
-</span><span class='line'><span class="c"> * &gt; zoft t &gt;&gt;= go Left;;</span>
-</span><span class='line'><span class="c"> * &gt; zoft t &gt;&gt;= go Left &gt;&gt;= go Left &gt;&gt;= go Left;;</span>
-</span><span class='line'><span class="c"> * &gt; zoft t &gt;&gt;= go Left &gt;&gt;= go Left &gt;&gt;= go Right |&gt; fromOpt |&gt; ztot;;</span>
-</span><span class='line'><span class="c"> *)</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">type</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tree</span> <span class="o">=</span> <span class="nc">Empty</span> <span class="o">|</span> <span class="nc">Node</span> <span class="k">of</span> <span class="k">&#39;</span><span class="n">a</span> <span class="o">*</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tree</span> <span class="o">*</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tree</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">type</span> <span class="n">dir</span> <span class="o">=</span> <span class="nc">Left</span> <span class="o">|</span> <span class="nc">Right</span>
-</span><span class='line'><span class="c">(* A past step in this tree traversal.</span>
-</span><span class='line'><span class="c"> * [dir] is the direction we took at this step.</span>
-</span><span class='line'><span class="c"> * [sibling] is the subtree we&#39;d have visited if we took</span>
-</span><span class='line'><span class="c">              the other direction.</span>
-</span><span class='line'><span class="c"> * [node] well... the value of the node visited at this step.</span>
-</span><span class='line'><span class="c"> *)</span>
-</span><span class='line'><span class="k">type</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">past</span> <span class="o">=</span> <span class="o">{</span><span class="n">dir</span><span class="o">:</span> <span class="n">dir</span><span class="o">;</span> <span class="n">node</span><span class="o">:</span> <span class="k">&#39;</span><span class="n">a</span><span class="o">;</span> <span class="n">sibling</span><span class="o">:</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tree</span><span class="o">}</span>
-</span><span class='line'><span class="k">type</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">futur</span> <span class="o">=</span> <span class="o">{</span><span class="n">left</span><span class="o">:</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tree</span><span class="o">;</span> <span class="n">right</span><span class="o">:</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tree</span><span class="o">}</span>
-</span><span class='line'><span class="k">type</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">tzipper</span> <span class="o">=</span> <span class="nc">Zipper</span> <span class="k">of</span> <span class="k">&#39;</span><span class="n">a</span> <span class="o">*</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">past</span> <span class="kt">list</span> <span class="o">*</span> <span class="k">&#39;</span><span class="n">a</span> <span class="n">futur</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="n">go</span> <span class="n">dir</span> <span class="o">(</span><span class="nc">Zipper</span> <span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">past</span><span class="o">,</span> <span class="n">futur</span><span class="o">))</span> <span class="o">=</span>
-</span><span class='line'>  <span class="k">let</span> <span class="n">next_hole</span><span class="o">,</span> <span class="n">sibling</span> <span class="o">=</span> <span class="k">match</span> <span class="n">dir</span> <span class="k">with</span>
-</span><span class='line'>    <span class="o">|</span> <span class="nc">Left</span> <span class="o">-&gt;</span> <span class="n">futur</span><span class="o">.</span><span class="n">left</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">right</span>
-</span><span class='line'>    <span class="o">|</span> <span class="nc">Right</span> <span class="o">-&gt;</span> <span class="n">futur</span><span class="o">.</span><span class="n">right</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">left</span>
-</span><span class='line'>  <span class="k">in</span>
-</span><span class='line'>  <span class="k">match</span> <span class="n">next_hole</span> <span class="k">with</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">Empty</span> <span class="o">-&gt;</span> <span class="nc">None</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">el</span><span class="o">,</span> <span class="n">l</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="k">let</span> <span class="n">past</span> <span class="o">=</span> <span class="o">{</span><span class="n">dir</span><span class="o">;</span> <span class="n">node</span><span class="o">;</span> <span class="n">sibling</span><span class="o">}::</span><span class="n">past</span> <span class="k">in</span>
-</span><span class='line'>    <span class="nc">Some</span> <span class="o">(</span><span class="nc">Zipper</span> <span class="o">(</span><span class="n">el</span><span class="o">,</span> <span class="n">past</span><span class="o">,</span> <span class="o">{</span><span class="n">left</span> <span class="o">=</span> <span class="n">l</span><span class="o">;</span> <span class="n">right</span> <span class="o">=</span> <span class="n">r</span><span class="o">;}))</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="n">up</span> <span class="o">(</span><span class="nc">Zipper</span> <span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">past</span><span class="o">,</span> <span class="n">futur</span><span class="o">))</span> <span class="o">=</span>
-</span><span class='line'>  <span class="k">match</span> <span class="n">past</span> <span class="k">with</span>
-</span><span class='line'>  <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="nc">None</span>
-</span><span class='line'>  <span class="o">|</span> <span class="n">last</span><span class="o">::</span><span class="n">before</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="k">let</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span> <span class="o">=</span> <span class="k">match</span> <span class="n">last</span><span class="o">.</span><span class="n">dir</span> <span class="k">with</span>
-</span><span class='line'>      <span class="o">|</span> <span class="nc">Left</span> <span class="o">-&gt;</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">left</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">right</span><span class="o">),</span> <span class="n">last</span><span class="o">.</span><span class="n">sibling</span>
-</span><span class='line'>      <span class="o">|</span> <span class="nc">Right</span> <span class="o">-&gt;</span> <span class="n">last</span><span class="o">.</span><span class="n">sibling</span><span class="o">,</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">left</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">right</span><span class="o">)</span>
-</span><span class='line'>    <span class="k">in</span>
-</span><span class='line'>    <span class="nc">Some</span> <span class="o">(</span><span class="nc">Zipper</span> <span class="o">(</span><span class="n">last</span><span class="o">.</span><span class="n">node</span><span class="o">,</span> <span class="n">before</span><span class="o">,</span> <span class="o">{</span><span class="n">left</span><span class="o">;</span> <span class="n">right</span><span class="o">}))</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="n">zoft</span> <span class="o">=</span> <span class="k">function</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">Empty</span> <span class="o">-&gt;</span> <span class="nc">None</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">el</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="nc">Some</span> <span class="o">(</span><span class="nc">Zipper</span> <span class="o">(</span><span class="n">el</span><span class="o">,</span> <span class="bp">[]</span><span class="o">,</span> <span class="o">{</span><span class="n">left</span><span class="o">;</span> <span class="n">right</span><span class="o">}))</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="n">ztot</span> <span class="o">(</span><span class="nc">Zipper</span> <span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">past</span><span class="o">,</span> <span class="n">futur</span><span class="o">))</span> <span class="o">=</span>
-</span><span class='line'>  <span class="k">let</span> <span class="n">subtree</span> <span class="o">=</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">left</span><span class="o">,</span> <span class="n">futur</span><span class="o">.</span><span class="n">right</span><span class="o">)</span> <span class="k">in</span>
-</span><span class='line'>  <span class="k">let</span> <span class="k">rec</span> <span class="n">buildup</span> <span class="n">subt</span> <span class="o">=</span> <span class="k">function</span>
-</span><span class='line'>    <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="n">subt</span>
-</span><span class='line'>    <span class="o">|</span> <span class="n">last</span><span class="o">::</span><span class="n">before</span> <span class="o">-&gt;</span>
-</span><span class='line'>      <span class="k">let</span> <span class="n">subt</span> <span class="o">=</span> <span class="k">match</span> <span class="n">last</span><span class="o">.</span><span class="n">dir</span> <span class="k">with</span>
-</span><span class='line'>        <span class="o">|</span> <span class="nc">Left</span> <span class="o">-&gt;</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">last</span><span class="o">.</span><span class="n">node</span><span class="o">,</span> <span class="n">subt</span><span class="o">,</span> <span class="n">last</span><span class="o">.</span><span class="n">sibling</span><span class="o">)</span>
-</span><span class='line'>        <span class="o">|</span> <span class="nc">Right</span> <span class="o">-&gt;</span> <span class="nc">Node</span> <span class="o">(</span><span class="n">last</span><span class="o">.</span><span class="n">node</span><span class="o">,</span> <span class="n">last</span><span class="o">.</span><span class="n">sibling</span><span class="o">,</span> <span class="n">subt</span><span class="o">)</span>
-</span><span class='line'>      <span class="k">in</span> <span class="n">buildup</span> <span class="n">subt</span> <span class="n">before</span>
-</span><span class='line'>  <span class="k">in</span> <span class="n">buildup</span> <span class="n">subtree</span> <span class="n">past</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="o">(&gt;&gt;=)</span> <span class="n">x</span> <span class="o">(</span><span class="n">f</span><span class="o">:</span> <span class="k">&#39;</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="k">&#39;</span><span class="n">b</span> <span class="n">option</span><span class="o">)</span> <span class="o">=</span> <span class="k">match</span> <span class="n">x</span> <span class="k">with</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">None</span> <span class="o">-&gt;</span> <span class="nc">None</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">Some</span> <span class="n">v</span> <span class="o">-&gt;</span> <span class="n">f</span> <span class="n">v</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="o">(|&gt;)</span> <span class="n">x</span> <span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="n">x</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">let</span> <span class="n">fromOpt</span> <span class="o">=</span> <span class="k">function</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">None</span> <span class="o">-&gt;</span> <span class="n">failwith</span> <span class="s2">&quot;Nothing to extract&quot;</span>
-</span><span class='line'>  <span class="o">|</span> <span class="nc">Some</span> <span class="n">v</span> <span class="o">-&gt;</span> <span class="n">v</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Some text here to test margins.</p>
 </div>
   
   

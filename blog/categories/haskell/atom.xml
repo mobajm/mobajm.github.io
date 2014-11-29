@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Programming & Technology. Mostly.]]></title>
-  <link href="http://mobajm.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Haskell, | Programming & Technology. Mostly.]]></title>
+  <link href="http://mobajm.github.io/blog/categories/haskell/atom.xml" rel="self"/>
   <link href="http://mobajm.github.io/"/>
   <updated>2014-11-29T23:49:18+00:00</updated>
   <id>http://mobajm.github.io/</id>
@@ -28,11 +28,9 @@ the 1960s with the release of Letraset sheets containing Lorem Ipsum
 passages, and more recently with desktop publishing software like
 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>~/d/website git:source$ rake new_post["Testing this post"]                           ◼
-</span><span class='line'>~/d/website git:source$</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>~/d/website git:source$ rake new_post["Testing this post"]                           ◼
+~/d/website git:source$
+</code></pre>
 ]]></content>
   </entry>
   
